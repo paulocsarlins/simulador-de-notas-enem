@@ -1,84 +1,388 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
     <title>Simulador de Notas ENEM</title>
 </head>
 <body>
-    <select class="form-select" aria-label="Default select example">
-        <option selected>Escolha um curso</option>
-        <option value=["657,10;829,71"]>ABI - ENGENHARIA</option>
-        <option value=["672,67;760,35"]>ADMINISTRAÇÃO</option>
-        <option value=["641,59;684,59"]>ARQUEOLOGIA</option>
-        <option value=["757,22;812"]>ARQUITETURA E URBANISMO</option>
-        <option value=["721,04;775,35"]>ARTES VISUAIS – LICENCIATURA</option>
-        <option value=["602,18;686,56"]>BIBLIOTECONOMIA</option>
-        <option value=["725,85;793,55"]>BIOMEDICINA</option>
-        <option value=["634,78;751,34"]>CIÊNCIAS ATUARIAIS</option>
-        <option value=["667,12;760,06"]>CIÊNCIAS BIOLÓGICAS – BACHARELADO</option>
-        <option value=["626,43;705,27"]>CIÊNCIAS BIOLÓGICAS / ÊNFASE EM CIÊNCIAS AMBIENTAIS – BACHARELADO</option>
-        <option value=["633,7;765,12"]>CIÊNCIAS BIOLÓGICAS – LICENCIATURA</option>
-        <option value=["653,66;791,99"]>CIÊNCIAS CONTÁBEIS</option>
-        <option value=["774,49;842,44"]>CIÊNCIA DA COMPUTAÇÃO</option>
-        <option value=["678,18;829,71"]>CIÊNCIAS ECONÔMICAS</option>
-        <option value=["676,85;729,74"]>CIÊNCIA POLÍTICA COM ÊNFASE EM RELAÇÕES INTERNACIONAIS</option>
-        <option value=["658,08;769,9"]>CIÊNCIAS SOCIAIS – BACHARELADO</option>
-        <option value=["629,06;699,94"]>CIÊNCIAS SOCIAIS – LICENCIATURA</option>
-        <option value=["717,06;795,82"]>CINEMA E AUDIOVISUAL</option>
-        <option value=["672,67;828,26"]>DESIGN</option>
-        <option value=["762,16;840,02"]>DIREITO (Diurno)</option>
-        <option value=["751,09;801,56"]>DIREITO (Noturno)</option>
-        <option value=["630,09;710,63"]>EDUCAÇÃO FÍSICA – BACHARELADO</option>
-        <option value=["590,79;673,43"]>EDUCAÇÃO FÍSICA - LICENCIATURA</option>
-        <option value=["720,93;781,31"]>ENFERMAGEM</option>
-        <option value=["762,73;795,55"]>ENGENHARIA BIOMÉDICA</option>
-        <option value=["598,25;688,36"]>ENGENHARIA CARTOGRÁFICA E DE AGRIMENSURA</option>
-        <option value=["775,44;848,36"]>ENGENHARIA DA COMPUTAÇÃO</option>
-        <option value=["717,92;804,73"]>ENGENHARIA DE PRODUÇÃO</option>
-        <option value=["658,99;815,58"]>ESTATÍSTICA</option>
-        <option value=["602,97;668,43"]>EXPRESSÃO GRÁFICA - LICENCIATURA</option>
-        <option value=["697,86;788,99"]>FARMÁCIA</option>
-        <option value=["651,97;749,49"]>FILOSOFIA - BACHARELADO</option>
-        <option value=["616,66;713,44"]>FILOSOFIA - LICENCIATURA</option>
-        <option value=["730,8;830,69"]>FÍSICA - BACHARELADO</option>
-        <option value=["634,24;786,05"]>FÍSICA - LICENCIATURA </option>
-        <option value=["713,44;779,76"]>FISIOTERAPIA</option>
-        <option value=["699,18;745,89"]>FONOAUDIOLOGIA</option>
-        <option value=["608,21;737,38"]>GEOGRAFIA – BACHARELADO</option>
-        <option value=["625,63;723,41"]>GEOGRAFIA – LICENCIATURA</option>
-        <option value=["604,33;686,56"]>GEOLOGIA</option>
-        <option value=["658,6;733,72"]>GESTÃO DA INFORMAÇÃO – BACHARELADO</option>
-        <option value=["676,79;768,58"]>HISTÓRIA - BACHARELADO</option>
-        <option value=["671,16;740,66"]>HISTÓRIA - LICENCIATURA</option>
-        <option value=["614,15;714,09"]>HOTELARIA</option>
-        <option value=["717,35;802,1"]>JORNALISMO</option>
-        <option value=["670,08;744,56"]>LETRAS - BACHARELADO</option>
-        <option value=["657,68;748,35"]>LETRAS - LICENCIATURA EM PORTUGUÊS</option>
-        <option value=["612,2;669"]>LETRAS - LICENCIATURA EM ESPANHOL</option>
-        <option value=["672,69;721,47"]>LETRAS - LICENCIATURA EM INGLÊS</option>
-        <option value=["642,87;679,63"]>LETRAS - LICENCIATURA EM FRANCÊS</option>
-        <option value=["865,67;905,7"]>MATEMÁTICA - BACHARELADO</option>
-        <option value=["643,21;757,29"]>MATEMÁTICA – LICENCIATURA</option>
-        <option value=["781,44;845,79"]>MEDICINA</option>
-        <option value=["612,06;684,83"]>MUSEOLOGIA - BACHARELADO</option>
-        <option value=["703,18;755,53"]>NUTRIÇÃO – BACHARELADO</option>
-        <option value=["643,82;696,36"]>OCEANOGRAFIA – BACHARELADO</option>
-        <option value=["752,76;789,36"]>ODONTOLOGIA</option>
-        <option value=["615,37;726,05"]>PEDAGOGIA - LICENCIATURA</option>
-        <option value=["603,45;696,82"]>PSICOLOGIA</option>
-        <option value=["711,02;793,58"]>PUBLICIDADE E PROPAGANDA</option>
-        <option value=["717,06;795,82"]>RÁDIO, TV E INTERNET</option>
-        <option value=["637,77;738,75"]>QUÍMICA INDUSTRIAL</option>
-        <option value=["659,06;738,43"]>QUÍMICA - BACHARELADO</option>
-        <option value=["598,58;719,7"]>QUÍMICA – LICENCIATURA</option>
-        <option value=["606,68;687,8"]>SECRETARIADO</option>
-        <option value=["640,38;691,32"]>SERVIÇO SOCIAL</option>
-        <option value=["758,53;872,19"]>SISTEMAS DE INFORMAÇÃO</option>
-        <option value=["669,57;741,81"]>TEATRO – LICENCIATURA</option>
-        <option value=["618,94;674,22"]>TERAPIA OCUPACIONAL</option>
-        <option value=["627,43;666,85"]>TURISMO</option>
-    </select>
+
+    <div class="container">
+    <table class="table table-hover">
+
+
+        <thead>
+            <tr>
+                <th scope="col"></th>
+              </tr>
+            <tr>
+                <th scope="col">Simulador de Notas - ENEM</th>
+                <th scope="col">NOTA MÍNIMA</th>
+                <th scope="col"></th>
+                <th scope="col">NOTA MÁXIMA</th>
+              </tr>
+          <tr>
+            <th scope="col">
+                <select name="notas" id="cursoNotas" class="form-select" aria-label="Default select example" onchange="cursonotas()">
+                    <option selected>Escolha um curso</option>
+                    <option value=["657,10;829,71"]>ABI - ENGENHARIA</option>
+                    <option value=["672,67;760,35"]>ADMINISTRAÇÃO</option>
+                    <option value=["641,59;684,59"]>ARQUEOLOGIA</option>
+                    <option value=["757,22;812"]>ARQUITETURA E URBANISMO</option>
+                    <option value=["721,04;775,35"]>ARTES VISUAIS – LICENCIATURA</option>
+                    <option value=["602,18;686,56"]>BIBLIOTECONOMIA</option>
+                    <option value=["725,85;793,55"]>BIOMEDICINA</option>
+                    <option value=["634,78;751,34"]>CIÊNCIAS ATUARIAIS</option>
+                    <option value=["667,12;760,06"]>CIÊNCIAS BIOLÓGICAS – BACHARELADO</option>
+                    <option value=["626,43;705,27"]>CIÊNCIAS BIOLÓGICAS / ÊNFASE EM CIÊNCIAS AMBIENTAIS – BACHARELADO</option>
+                    <option value=["633,7;765,12"]>CIÊNCIAS BIOLÓGICAS – LICENCIATURA</option>
+                    <option value=["653,66;791,99"]>CIÊNCIAS CONTÁBEIS</option>
+                    <option value=["774,49;842,44"]>CIÊNCIA DA COMPUTAÇÃO</option>
+                    <option value=["678,18;829,71"]>CIÊNCIAS ECONÔMICAS</option>
+                    <option value=["676,85;729,74"]>CIÊNCIA POLÍTICA COM ÊNFASE EM RELAÇÕES INTERNACIONAIS</option>
+                    <option value=["658,08;769,9"]>CIÊNCIAS SOCIAIS – BACHARELADO</option>
+                    <option value=["629,06;699,94"]>CIÊNCIAS SOCIAIS – LICENCIATURA</option>
+                    <option value=["717,06;795,82"]>CINEMA E AUDIOVISUAL</option>
+                    <option value=["672,67;828,26"]>DESIGN</option>
+                    <option value=["762,16;840,02"]>DIREITO (Diurno)</option>
+                    <option value=["751,09;801,56"]>DIREITO (Noturno)</option>
+                    <option value=["630,09;710,63"]>EDUCAÇÃO FÍSICA – BACHARELADO</option>
+                    <option value=["590,79;673,43"]>EDUCAÇÃO FÍSICA - LICENCIATURA</option>
+                    <option value=["720,93;781,31"]>ENFERMAGEM</option>
+                    <option value=["762,73;795,55"]>ENGENHARIA BIOMÉDICA</option>
+                    <option value=["598,25;688,36"]>ENGENHARIA CARTOGRÁFICA E DE AGRIMENSURA</option>
+                    <option value=["775,44;848,36"]>ENGENHARIA DA COMPUTAÇÃO</option>
+                    <option value=["717,92;804,73"]>ENGENHARIA DE PRODUÇÃO</option>
+                    <option value=["658,99;815,58"]>ESTATÍSTICA</option>
+                    <option value=["602,97;668,43"]>EXPRESSÃO GRÁFICA - LICENCIATURA</option>
+                    <option value=["697,86;788,99"]>FARMÁCIA</option>
+                    <option value=["651,97;749,49"]>FILOSOFIA - BACHARELADO</option>
+                    <option value=["616,66;713,44"]>FILOSOFIA - LICENCIATURA</option>
+                    <option value=["730,8;830,69"]>FÍSICA - BACHARELADO</option>
+                    <option value=["634,24;786,05"]>FÍSICA - LICENCIATURA </option>
+                    <option value=["713,44;779,76"]>FISIOTERAPIA</option>
+                    <option value=["699,18;745,89"]>FONOAUDIOLOGIA</option>
+                    <option value=["608,21;737,38"]>GEOGRAFIA – BACHARELADO</option>
+                    <option value=["625,63;723,41"]>GEOGRAFIA – LICENCIATURA</option>
+                    <option value=["604,33;686,56"]>GEOLOGIA</option>
+                    <option value=["658,6;733,72"]>GESTÃO DA INFORMAÇÃO – BACHARELADO</option>
+                    <option value=["676,79;768,58"]>HISTÓRIA - BACHARELADO</option>
+                    <option value=["671,16;740,66"]>HISTÓRIA - LICENCIATURA</option>
+                    <option value=["614,15;714,09"]>HOTELARIA</option>
+                    <option value=["717,35;802,1"]>JORNALISMO</option>
+                    <option value=["670,08;744,56"]>LETRAS - BACHARELADO</option>
+                    <option value=["657,68;748,35"]>LETRAS - LICENCIATURA EM PORTUGUÊS</option>
+                    <option value=["612,2;669"]>LETRAS - LICENCIATURA EM ESPANHOL</option>
+                    <option value=["672,69;721,47"]>LETRAS - LICENCIATURA EM INGLÊS</option>
+                    <option value=["642,87;679,63"]>LETRAS - LICENCIATURA EM FRANCÊS</option>
+                    <option value=["865,67;905,7"]>MATEMÁTICA - BACHARELADO</option>
+                    <option value=["643,21;757,29"]>MATEMÁTICA – LICENCIATURA</option>
+                    <option value=["781,44;845,79"]>MEDICINA</option>
+                    <option value=["612,06;684,83"]>MUSEOLOGIA - BACHARELADO</option>
+                    <option value=["703,18;755,53"]>NUTRIÇÃO – BACHARELADO</option>
+                    <option value=["643,82;696,36"]>OCEANOGRAFIA – BACHARELADO</option>
+                    <option value=["752,76;789,36"]>ODONTOLOGIA</option>
+                    <option value=["615,37;726,05"]>PEDAGOGIA - LICENCIATURA</option>
+                    <option value=["603,45;696,82"]>PSICOLOGIA</option>
+                    <option value=["711,02;793,58"]>PUBLICIDADE E PROPAGANDA</option>
+                    <option value=["717,06;795,82"]>RÁDIO, TV E INTERNET</option>
+                    <option value=["637,77;738,75"]>QUÍMICA INDUSTRIAL</option>
+                    <option value=["659,06;738,43"]>QUÍMICA - BACHARELADO</option>
+                    <option value=["598,58;719,7"]>QUÍMICA – LICENCIATURA</option>
+                    <option value=["606,68;687,8"]>SECRETARIADO</option>
+                    <option value=["640,38;691,32"]>SERVIÇO SOCIAL</option>
+                    <option value=["758,53;872,19"]>SISTEMAS DE INFORMAÇÃO</option>
+                    <option value=["669,57;741,81"]>TEATRO – LICENCIATURA</option>
+                    <option value=["618,94;674,22"]>TERAPIA OCUPACIONAL</option>
+                    <option value=["627,43;666,85"]>TURISMO</option>
+                </select>
+            </th>
+            <th id="nota-min" scope="col">100</th>
+            <th scope="col"></th>
+            <th id="nota-max" scope="col">1000</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">PESOS PARA UFPE</th>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">CIÊNCIAS HUMANAS</th>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">CIÊNCIAS DA NATUREZA</th>
+            <td colspan="2"></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">LINGUAGENS</th>
+            <td colspan="2"></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">MATEMÁTICA</th>
+            <td colspan="2"></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">REDAÇÃO</th>
+            <td colspan="2"></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">PROVA</th>
+            <td colspan="2">ACERTOS</td>
+            <td>NOTA</td>
+          </tr>
+          <tr>
+            <th scope="row">CIÊNCIAS HUMANAS</th>
+            <td colspan="2">
+              <select name="selectNotas" id="notashumanas" onchange="notahumanas()">
+                <option selected>Escolha uma nota</option>
+                <option value="22,20">0</option>
+                <option value="52,30">1</option>
+                <option value="73,40">2</option>
+                <option value="98,25">3</option>
+                <option value="121,48">4</option>
+                <option value="140,35">5</option>
+                <option value="165,45">6</option>
+                <option value="188,45">7</option>
+                <option value="209,10">8</option>
+                <option value="246,80">9</option>
+                <option value="306,70">10</option>
+                <option value="328,90">11</option>
+                <option value="352,70">12</option>
+                <option value="387,50">13</option>
+                <option value="403,20">14</option>
+                <option value="432,50">15</option>
+                <option value="460,30">16</option>
+                <option value="478,90">17</option>
+                <option value="495,60">18</option>
+                <option value="519,80">19</option>
+                <option value="532,60">20</option>
+                <option value="554,20">21</option>
+                <option value="575,35">22</option>
+                <option value="589,70">23</option>
+                <option value="596,80">24</option>
+                <option value="604,20">25</option>
+                <option value="612,90">26</option>
+                <option value="620,80">27</option>
+                <option value="628,50">28</option>
+                <option value="636,40">29</option>
+                <option value="656,40">30</option>
+                <option value="669,40">31</option>
+                <option value="688,60">32</option>
+                <option value="698,60">33</option>
+                <option value="707,10">34</option>
+                <option value="716,90">35</option>
+                <option value="725,30">36</option>
+                <option value="734,90">37</option>
+                <option value="743,60">38</option>
+                <option value="752,40">39</option>
+                <option value="762,20">40</option>
+                <option value="778,40">41</option>
+                <option value="793,50">42</option>
+                <option value="805,30">43</option>
+                <option value="818,35">44</option>
+                <option value="820,50">45</option>
+
+              </select>
+            </td>
+            <td id="notahumanas"></td>
+          </tr>
+          <tr>
+            <th scope="row">CIÊNCIAS DA NATUREZA</th>
+            <td colspan="2">
+              <select name="selectNotas" id="notasnatureza" onchange="notanatureza()">
+                <option selected>Escolha uma nota</option>
+                <option value="42,20">0</option>
+                <option value="102,30">1</option>
+                <option value="143,40">2</option>
+                <option value="168,25">3</option>
+                <option value="181,48">4</option>
+                <option value="200,35">5</option>
+                <option value="215,45">6</option>
+                <option value="248,45">7</option>
+                <option value="269,10">8</option>
+                <option value="286,80">9</option>
+                <option value="306,70">10</option>
+                <option value="328,90">11</option>
+                <option value="352,70">12</option>
+                <option value="387,50">13</option>
+                <option value="403,20">14</option>
+                <option value="432,50">15</option>
+                <option value="460,30">16</option>
+                <option value="478,90">17</option>
+                <option value="495,60">18</option>
+                <option value="519,80">19</option>
+                <option value="532,60">20</option>
+                <option value="554,20">21</option>
+                <option value="575,35">22</option>
+                <option value="602,70">23</option>
+                <option value="611,80">24</option>
+                <option value="621,20">25</option>
+                <option value="630,90">26</option>
+                <option value="640,80">27</option>
+                <option value="650,50">28</option>
+                <option value="659,40">29</option>
+                <option value="669,40">30</option>
+                <option value="679,40">31</option>
+                <option value="688,60">32</option>
+                <option value="698,60">33</option>
+                <option value="707,10">34</option>
+                <option value="716,90">35</option>
+                <option value="725,30">36</option>
+                <option value="734,90">37</option>
+                <option value="743,60">38</option>
+                <option value="752,40">39</option>
+                <option value="772,20">40</option>
+                <option value="788,40">41</option>
+                <option value="815,50">42</option>
+                <option value="835,30">43</option>
+                <option value="848,35">44</option>
+                <option value="870,50">45</option>
+              </select>
+            </td>
+            <td id="notanatureza"></td>
+          </tr>
+          <tr>
+            <th scope="row">LINGUAGENS</th>
+            <td colspan="2">
+              <select name="selectNotas" id="notaslinguagens" onchange="notalinguagens()">
+                <option selected>Escolha uma nota</option>
+                <option value="22,20">0</option>
+                <option value="102,30">1</option>
+                <option value="173,40">2</option>
+                <option value="298,25">3</option>
+                <option value="351,48">4</option>
+                <option value="370,35">5</option>
+                <option value="395,45">6</option>
+                <option value="408,45">7</option>
+                <option value="429,10">8</option>
+                <option value="446,80">9</option>
+                <option value="466,70">10</option>
+                <option value="478,90">11</option>
+                <option value="482,70">12</option>
+                <option value="487,50">13</option>
+                <option value="493,20">14</option>
+                <option value="502,50">15</option>
+                <option value="510,30">16</option>
+                <option value="518,90">17</option>
+                <option value="528,60">18</option>
+                <option value="539,80">19</option>
+                <option value="552,60">20</option>
+                <option value="564,20">21</option>
+                <option value="575,35">22</option>
+                <option value="589,70">23</option>
+                <option value="596,80">24</option>
+                <option value="604,20">25</option>
+                <option value="612,90">26</option>
+                <option value="620,80">27</option>
+                <option value="628,50">28</option>
+                <option value="636,40">29</option>
+                <option value="656,40">30</option>
+                <option value="669,40">31</option>
+                <option value="688,60">32</option>
+                <option value="628,60">33</option>
+                <option value="637,10">34</option>
+                <option value="646,90">35</option>
+                <option value="675,30">36</option>
+                <option value="694,90">37</option>
+                <option value="703,60">38</option>
+                <option value="712,40">39</option>
+                <option value="722,20">40</option>
+                <option value="748,40">41</option>
+                <option value="763,50">42</option>
+                <option value="775,30">43</option>
+                <option value="788,35">44</option>
+                <option value="802,50">45</option>
+              </select>
+            </td>
+            <td id="notalinguagens"></td>
+          </tr>
+          <tr>
+            <th scope="row">MATEMÁTICA</th>
+            <td colspan="2">
+              <select name="selectNotas" id="notasmatematica" onchange="notamatematica()">
+                <option selected>Escolha uma nota</option>
+                <option value="102,20">0</option>
+                <option value="162,30">1</option>
+                <option value="203,40">2</option>
+                <option value="258,25">3</option>
+                <option value="301,48">4</option>
+                <option value="340,35">5</option>
+                <option value="365,45">6</option>
+                <option value="398,45">7</option>
+                <option value="449,10">8</option>
+                <option value="466,80">9</option>
+                <option value="486,70">10</option>
+                <option value="508,90">11</option>
+                <option value="532,70">12</option>
+                <option value="557,50">13</option>
+                <option value="583,20">14</option>
+                <option value="607,50">15</option>
+                <option value="629,30">16</option>
+                <option value="648,90">17</option>
+                <option value="665,60">18</option>
+                <option value="679,80">19</option>
+                <option value="692,60">20</option>
+                <option value="704,20">21</option>
+                <option value="715,35">22</option>
+                <option value="725,70">23</option>
+                <option value="735,80">24</option>
+                <option value="746,20">25</option>
+                <option value="755,90">26</option>
+                <option value="765,80">27</option>
+                <option value="776,50">28</option>
+                <option value="786,40">29</option>
+                <option value="796,40">30</option>
+                <option value="806,40">31</option>
+                <option value="817,60">32</option>
+                <option value="828,60">33</option>
+                <option value="840,10">34</option>
+                <option value="851,90">35</option>
+                <option value="864,30">36</option>
+                <option value="876,90">37</option>
+                <option value="891,60">38</option>
+                <option value="906,40">39</option>
+                <option value="922,20">40</option>
+                <option value="939,40">41</option>
+                <option value="955,50">42</option>
+                <option value="971,30">43</option>
+                <option value="982,35">44</option>
+                <option value="985,50">45</option>
+              </select>
+            </td>
+            <td id="notamatematica"></td>
+          </tr>
+          <tr>
+            <th scope="row">REDAÇÃO</th>
+            <td colspan="2"><input type="number" name="" id=""></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row">MÉDIA GERAL</th>
+            <td colspan="2"></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th scope="row"></th>
+            <td colspan="2"></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
