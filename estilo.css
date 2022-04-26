@@ -1,3 +1,63 @@
 .titulo-pesos, .notaMin, .notaMax, #notaMin, #notaMax{
     text-align: center;
 }
+
+.bg-light{
+    background-color: #4682B4!important;
+}
+
+.card{
+    width: 620px;
+}
+
+.provaHumanas{
+    padding-left: 150px;
+}
+
+.provaNatureza{
+    padding-left: 129px;
+}
+
+.provaLinguagem{
+    padding-left: 196px;
+}
+
+.provaMatematica{
+    padding-left: 194px;
+}
+
+.notaDisciplina{
+    padding-left: 175px;
+}
+
+.pesoHumanas{
+    padding-left: 55px;
+}
+
+.pesoNatureza{
+    padding-left: 36px;
+}
+
+.pesoLinguagens{
+    padding-left: 102px;
+}
+
+.pesoMatematica{
+    padding-left: 99px;
+}
+
+.pesoRedacao{
+    padding-left: 121px;
+}
+
+.provaRedacao{
+    padding-left: 177px;
+}
+
+.spanProva{
+    padding-left: 36px;
+}
+
+.spanNota{
+    padding-left: 530px;
+}
