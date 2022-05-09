@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
 .titulo-pesos, .notaMin, .notaMax, #notaMin, #notaMax{
     text-align: center;
 }
@@ -11,7 +19,7 @@
 }
 
 .card{
-    width: 620px;
+    width: 640px;
 }
 
 .provaHumanas{
@@ -23,11 +31,11 @@
 }
 
 .provaLinguagem{
-    padding-left: 196px;
+    padding-left: 207px;
 }
 
 .provaMatematica{
-    padding-left: 194px;
+    padding-left: 200px;
 }
 
 .notaDisciplina{
@@ -67,7 +75,7 @@
 }
 
 .spanNota{
-    padding-left: 230px;
+    padding-left: 262px;
 }
 
 .titulo{
@@ -76,9 +84,9 @@
     height: 400px;
     text-align: center;
     padding-top: 75px;
+    color: white;
 }
 
 .mensagem{
-    color: white;
     font-size: 50px;
 }
