@@ -6,6 +6,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+button, input{
+    width: 170px;
+}
+
 .titulo-pesos, .notaMin, .notaMax, #notaMin, #notaMax{
     text-align: center;
 }
@@ -38,6 +42,7 @@
     padding-left: 200px;
 }
 
+
 .notaDisciplina{
     padding-left: 175px;
 }
@@ -47,23 +52,23 @@
 }
 
 .pesoNatureza{
-    padding-left: 36px;
+    padding-left: 32px;
 }
 
 .pesoLinguagens{
-    padding-left: 102px;
+    padding-left: 113px;
 }
 
 .pesoMatematica{
-    padding-left: 99px;
+    padding-left: 105px;
 }
 
 .pesoRedacao{
-    padding-left: 121px;
+    padding-left: 134px;
 }
 
 .provaRedacao{
-    padding-left: 177px;
+    padding-left: 225px;
 }
 
 .spanProva{
@@ -80,7 +85,6 @@
 
 .titulo{
     background-color: #0C2D48;
-    width: 100%;
     height: 400px;
     text-align: center;
     padding-top: 75px;
@@ -89,4 +93,8 @@
 
 .mensagem{
     font-size: 50px;
+}
+
+.btn-calcular{
+    margin-left: 315px;
 }
